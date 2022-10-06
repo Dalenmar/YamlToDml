@@ -1,0 +1,20 @@
+server:
+  address: 0.0.0.0
+  port: 8080
+
+spring:
+  application:
+    name: "app-two"
+  profiles:
+    active: "${SPRING_PROFILE:dev}"
+  liquibase:
+    change-log: classpath:db/changelog.yml
+
+custom-settings:
+  some-common-setting: true
+  enable-caching: false
+  some-secret: "dgh398vjklfa"
+  setting-do-not-include: "some string"
+
+do-not-include-settings:
+  setting-1: true

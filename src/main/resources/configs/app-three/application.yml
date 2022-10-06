@@ -1,0 +1,21 @@
+server:
+  address: 0.0.0.0
+  port: 8080
+
+spring:
+  application:
+    name: "app-three"
+  profiles:
+    active: "${SPRING_PROFILE:dev}"
+  liquibase:
+    change-log: classpath:db/changelog.yml
+
+custom-settings:
+  some-common-setting: true
+  enable-caching: true
+  some-secret: "94302ugjw4e"
+  setting-do-not-include: "some string"
+  additional-setting: 123
+
+do-not-include-settings:
+  setting-1: true
